@@ -241,7 +241,20 @@ sub _munge_format {
     my ($format) = @_;
 
     my %border = (
-        thin => 1,
+        none                => 0,
+        thin                => 1,
+        medium              => 2,
+        dashed              => 3,
+        dotted              => 4,
+        thick               => 5,
+        double              => 6,
+        hair                => 7,
+        medium_dashed       => 8,
+        dash_dot            => 9,
+        medium_dash_dot     => 10,
+        dash_dot_dot        => 11,
+        medium_dash_dot_dot => 12,
+        slant_dash_dot      => 13,
     );
 
     my $properties = { %$format };
