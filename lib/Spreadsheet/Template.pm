@@ -404,6 +404,20 @@ has _processor => (
     },
 );
 
+=attr json
+
+Instance of a JSON class that will handle decoding. Defaults to an instance of L<JSON>.
+Passing in a JSON obj with ->relaxed(1) set will allow for trailing commas in your templates.
+
+=cut
+
+has json => (
+    is => 'ro',
+    default => sub {
+        return JSON->new;
+    }
+);
+
 sub _writer {
     my $self = shift;
     my $class = $self->writer_class;
@@ -426,7 +440,7 @@ sub render {
     my $contents = $self->_processor->process($template, $vars);
     # not decode_json, since we expect that we are already being handed a
     # character string (decode_json also decodes utf8)
-    my $data = from_json($contents);
+    my $data = $self->json->decode($contents);
     return $self->_writer->write($data);
 }
 
