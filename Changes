@@ -1,8 +1,7 @@
 Revision history for Spreadsheet-Template
 
 {{$NEXT}}
-
-      - add json as a param instead of hardcoding from_json.
+      - add json as a param instead of hardcoding from_json (edibleenergy, #7)
 
 0.04  2014-09-10
       - support more border types (merrilymeredith, #5)
