@@ -135,8 +135,13 @@ sub _write_worksheet {
 
     if (exists $data->{column_widths}) {
         for my $i (0..$#{ $data->{column_widths} }) {
-            # XXX hidden columns?
             $sheet->set_column($i, $i, $data->{column_widths}[$i]);
+        }
+    }
+
+    if (exists $data->{hidden_columns}) {
+        for my $i (@{ $data->{hidden_columns} }) {
+            $sheet->set_column($i, $i, undef, undef, 1);
         }
     }
 
