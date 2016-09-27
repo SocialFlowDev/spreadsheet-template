@@ -1,6 +1,7 @@
 Revision history for Spreadsheet-Template
 
 {{$NEXT}}
+      - add is_hidden ability to sheets (yuvalcydulkin  #9)
 
 0.05  2015-03-25
       - add json as a param instead of hardcoding from_json (edibleenergy, #7)
