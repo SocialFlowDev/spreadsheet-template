@@ -1,6 +1,8 @@
 Revision history for Spreadsheet-Template
 
 {{$NEXT}}
+
+0.05_1 2016-09-27
       - add is_hidden ability to sheets (yuvalcydulkin  #9)
 
 0.05  2015-03-25
