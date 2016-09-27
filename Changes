@@ -2,6 +2,8 @@ Revision history for Spreadsheet-Template
 
 {{$NEXT}}
 
+      - no changes, just our internal cpan cant handle trial versions.
+
 0.05_1 2016-09-27
       - add is_hidden ability to sheets (yuvalcydulkin  #9)
 
